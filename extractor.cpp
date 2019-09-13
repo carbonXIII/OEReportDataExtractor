@@ -27,12 +27,8 @@ int main(int argc, char** argv) {
 	uint8_t* data = report.report_data;
 	size_t data_len = report.report_data_size;
 
-	// make sure the data is at least 32 bytes
-	// in practice it's padded to 40 bytes with 0s
-	assert(data_len >= 32);
-
 	// print out the hash
-	for(int i = 0; i < 32; i++) {
+	for(int i = 0; i < data_len; i++) {
 		cout << std::hex << std::setw(2) << std::setfill('0') << static_cast<int>(data[i]);
 	} cout << endl;
 
