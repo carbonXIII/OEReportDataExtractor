@@ -3,9 +3,6 @@
 
 using namespace std;
 
-// Simple test program to get the embedded SHA256 sum from an
-// oe quote in a file.
-
 int main(int argc, char** argv) {
 	if(argc < 2) {
 		cerr << argv[0] << " <quote file>" << endl;
